@@ -5,3 +5,16 @@ sum = 0
 for x in a: 
     sum+=1
     print(sum-1) #finding index values without enumerate function()
+#1.FIND THE ARMSTRONG NUMBER OR NOT 
+#--------------------------------------
+x = input('ENTER VALUE :')
+sum = 0
+for i in x:
+    b=int(i)**len(x)
+    sum=sum+b
+if(x==str(sum)):
+    print(sum)
+    print("THIS IS ARMSTRONG NUMBER ")
+else:
+    print(sum)
+    print("THIS IS NOT A ARMSTRONG NUMBER ")
