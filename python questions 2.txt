@@ -1,0 +1,1114 @@
+1. Write a Python program to sum all the items in a list. 
+--------------------------------------------------------
+print("SUM OF LIST VALUES:")
+def numbers():
+    a=[]
+    i=0
+    while(True):
+        val = input("ENTER VALUES :")
+        if(val == "@"):
+            break
+        a.append(int(val))
+    return a
+def sum():
+    lst = numbers()
+    sum_of = 0
+    for x in lst:
+        sum_of=sum_of+x
+    return sum_of
+res = sum()
+print(res)
+---------------------------------------------------
+
+2. Write a Python program to multiply all the items in a list.
+-------------------------------------------------------------
+def numbers():
+    lst=[]
+    n = int(input("ENTER HOW MANY NUMBERS YOU WANT :"))
+    if(n<=0):
+        print("USER PLEASE ENTER VALID NUMBER :")
+    else:
+        for x in range(1,n+1):
+            val = int(input(f"ENTER {x}  value :"))
+            lst.append(val)
+    return lst
+def multiple():
+    new_lst = numbers()
+    sum = 1
+    for i in new_lst:
+        sum=sum*i
+    return sum
+res = multiple()
+print(res) 
+-----------------------------------------------------------------
+
+3. Write a Python program to get the largest number from a list. 
+------------------------------------------------------------------
+def numbers():
+    lst = []
+    n = int(input("ENTER HOW MANY NUMBERS YOU WANT :"))
+    if(n<=0):
+        print("PLEASE ENTER VALID INPUT :")
+    else:
+        for x in range(1,n+1):
+            val = int(input(f"ENTER {x} value :"))
+            lst.append(val)
+    return lst
+def find_large():
+    new_lst = numbers()
+    large = 0
+    for i in new_lst:
+        if(large<i):
+            large = i
+    return large
+res = find_large()
+print(res)
+----------------------------------------------------
+4. Write a Python program to get the smallest number from a list.
+---------------------------------------------------------------------
+def numbers_list():
+    n = int(input('ENTER NUMBERS :'))
+    if(n<=0):
+        print("PLEASE ENTER VAILD INPUT")
+    else:
+        lst = []
+        for x in range(1,n+1):
+            val = int(input("ENTER %d value " %x))
+            lst.append(val)
+    return lst #return the list
+def sum():
+    new_lst = numbers_list() #inside function calling 
+    small = new_lst[0] #checking for small value by using temporary variable
+    for x in new_lst:
+        if(small>x):
+            small = x
+    return small
+res = sum()
+print(res)
+-----------------------------------------------
+
+5. Write a Python program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings. 
+		Sample List : ['abc', 'xyz', 'aba', '1221']
+		Expected Result : 2
+==========================================================
+a = ['abc', 'xyz', 'aba', '1221','sam','sas','mom']
+sum = 0
+b = []
+for x in a:
+    sum+=1
+    if(a[sum-1][0]==a[sum-1][-1]):
+        b.append(a)
+print(len(b))
+-----------------------------------------
+def find()
+    x = ['abc', 'xyz', 'aba', '1221']
+    a=[]
+    for i in x:
+        if(i[0]==i[-1]):
+            a.append(i)
+    print(len(a))
+find()
+========================================================================
+
+6. Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples. 
+	Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+	Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+
+7. Write a Python program to remove duplicates from a list. 
+===================================================
+a = [1,2,3,4,4,5,5,6,6,8,1,3,2,4]
+b=set(a)
+print(list(b))  #by using set method
+--------------------------------------
+secound method:-
+--------------------
+a = [1,2,3,4,4,5,5,6,6,8,1,3,2,4]
+d={}
+sum = 0
+for x in a:
+    sum+=1
+    d[x]=a[sum-1]
+lst=list()
+for i in d.keys():
+    lst.append(i)
+print(lst)
+============================================================
+8. Write a Python program to check a list is empty or not.
+==============================================================
+first_list = [1,2,3,4,5]
+secound_list = list()
+if(len(first_list)<0):
+    print("fist_list is empty list")
+else:
+    print("secound list is empty list")
+================================================= 
+
+
+
+10. Write a Python program to find the list of words that are longer than n from a given list of words. 
+=====================================================================================================
+a = ['saiteja','raviteja','harshavardhan','santhosh']
+length = a[0]
+for x in a:
+    if(len(x)>len(length)):
+        length = x
+print(length)
+-----------------------------------------------------
+secound-method:-
+--------------------
+a = ['saiteja','raviteja','harshavardhan','santhosh']
+d={}
+for x in a:
+    d[x]=len(x)
+for s,t in d.items():
+    print(s,":",t)
+print('='*50)
+print(max(d.values()))
+==============================================================
+
+11. Write a Python function that takes two lists and returns True if they have at least one common member.
+===========================================================================================
+def sum():
+    a = [1,2,3,4,5,6]
+    b = [6,7,8,9,10,11]
+    if(set(a).issubset(set(a))):
+        return True
+x = sum()
+print(x)
+===========================================================================
+
+
+12. Write a Python program to print a specified list after removing the 0th, 4th and 5th elements. 
+		Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+		Expected Output : ['Green', 'White', 'Black']
+====================================================================================
+a= ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+b = list()
+for x in a[1:-2]:
+    b.append(x)
+print(b) # ['Green', 'White', 'Black']
+-------------------------------------------------
+a= ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+b=[]
+for x in a:
+    if x == a[0] or x==a[-2] or x==a[-1]:
+        continue
+    b.append(x)
+print(b)
+---------------------------------------------------------------
+
+
+14. Write a Python program to print the numbers of a specified list after removing even numbers from it. 
+=====================================================================================
+def sum():
+    a = list()
+    while(True):
+        value = input("ENTER NUMBER :")
+        if(value == '@'):
+            break
+        a.append(int(value))
+    return a
+def checking():
+    b=list()
+    lst = sum()
+    for x in lst:
+        if(x%2==0):
+            continue
+        b.append(x)
+    return b
+
+res = checking()
+print(res)
+-----------------------------------------------------------
+
+
+16. Write a Python program to generate and print a list of first and last 5 elements where the values are square of numbers between 1 and 30 (both included).
+----------------------------------------
+def genarate():
+    a=[]
+    for x in range(1,31):
+        a.append(x)
+    return a
+def square():
+    lst = genarate()
+    fist_fiveNumbers= list()
+    last_fiveNumber = list()
+    for x in lst[0:6]:
+        fist_fiveNumbers.append(x*x)
+    for y in lst[-5:]:
+        last_fiveNumber.append(y*y)
+    return lst,fist_fiveNumbers,last_fiveNumber
+x,y,z = square()
+print(f"THIS IS ALL NUMBERS LIST 1 TO 30 {x}")
+print(f"THIS FISRT 5 NUMBERS  LIST {y}")
+print(f"THIS LAST FIVE NUMBERS  LIST {z}")
+=================================================================
+def allNumbers():
+    a =list()
+    for x in range(1,31):
+        a.append(x)
+    return a
+def square():
+    lst = allNumbers()
+    for f,l in zip(lst[0:6],lst[-5:]):
+        print(f,"--->",f*f,":",l,"------>",l*l)
+    return lst
+x=square()
+print("============================")
+print(x)
+-----------------------------------------------------
+
+17. Write a Python program to generate and print a list except for the first 5 elements, where the values are square of numbers between 1 and 30 (both included).
+------------------------------------------------- 
+def number():
+    a = []
+    for x in range(1,31):
+        a.append(x)
+    return a
+def square():
+    new_lst = number()
+    square_lst1=[]
+    for i in new_lst[5:-5]:
+        sq = i**2
+        square_lst1.append(sq)
+    return square_lst1
+res=square()
+print('generate and print a list except for the first 5 elements, where the values are square of numbers between 1 and 30={}'.format(res))
+
+-------------------------------------------------------------
+
+19. Write a Python program to get the difference between the two lists. 
+---------------------------------------------------------------------------
+ans:-
+   a = [1,2,3,4,5]
+   b = [1,2,3,4,6,7,8]
+   c = set(a)
+   d =  set(b)
+    print(d.difference(c))
+-----------------------------------------------------
+20. Write a Python program access the index of a list. 
+a = ['sai','teja']
+sum = 0
+for x in a:
+    sum +=1
+    print(a[sum-1])
+"""
+1) creat a list 
+2) assing the temporary variable out side the loop
+3 ) here using for loop inside the for loop assign the temporary variable to increment 1 for every interate 
+that then the temporary variable value incess untill loop get false 
+4) every iterable object index staring at 0 index position but the sum value start at 1 so 
+sum-1 =0 
+5) finally using for loop list_variable name[sum-1]{'syntax'} 
+-----------------------------------------------------------------
+
+21. Write a Python program to convert a list of characters into a string.
+--------------------------------------------------------------------------
+a = ['sai',"teja",'guntupalli']
+b = ''
+for x in a:
+    b = b+x
+
+print(b)
+'''
+step-1) create a list 
+step-2 ) create a temporary variable 
+step - 3) by using for loop for x in a:
+step - 4 ) covert the int into str by using type casting technic 
+step - 5 ) bayata unna b ane variable inside loop lo use chesi loop false ayye anta varaku prathi sai b value update and 
+str data store ayye ala set cheyyali
+
+'''
+------------------------------------ 
+
+22. Write a Python program to find the index of an item in a specified list. 
+--------------------------------------------------------------------------------
+def numbers():
+    n = int(input("ENTER HOW MANY NUMBERS YOU WANT :"))
+    if(n<=0):
+        print("ENTER VALID INPUT")
+    else:
+        lst = []
+        for x in range(1,n+1):
+            val = int(input(f"ENTER {x} value :"))
+            lst.append(val)
+    return lst
+def find_index():
+    new = numbers()
+    index = 0
+    for i in new:
+        index=index+1
+        print(i,'-','list items',"--->",index-1,'-','list index numbers')
+    return new
+res = find_index()
+print(res)
+----------------------------------------------------------
+
+24. Write a Python program to append a list to the second list. 
+-------------------------------------------------------------------------
+lst1 = [1,2,3,4,5,6,7,8,9]
+lst2 = []
+for x in lst1[::-1]:
+    lst2.append(x)
+print(lst2)
+---------------------------------------
+25. Write a Python program to select an item randomly from a list.
+-------------------------------------------------------------------------- 
+
+
+27. Write a Python program to find the second smallest number in a list.
+-----------------------------------------------------------------------------
+a = [1,2,3,4,-1,-2,-3,0]
+b = min(a)
+c = []
+for x in a:
+    if x==b:
+        continue  #first you have to remove min values from the list and create a new list with remaining values;
+		 # and again  find the small number from new list...............
+    c.append(x)
+secound_small = c[0]
+for i in c:
+    if(i<secound_small):
+        secound_small=i
+print(b)
+print(secound_small)
+------------------------
+method=2
+------------
+a = [1,2,3,4,-1,-2,-3,0]
+b = max(a)
+c = []
+for x in a:
+    if x==b:
+        continue
+    c.append(x)
+sv = max(c)
+print(b)
+print(sv)
+-------------------------------------------------------------------------------------------
+
+28. Write a Python program to find the second largest number in a list. 
+----------------------------------------------------
+a = [1,2,3,4,-1,-2,-3,0]
+b = max(a)
+c = []
+for x in a:
+    if x==b:
+        continue
+    c.append(x)
+sl = c[0]
+for i in c:
+    if(i>sl):
+        sl=i
+print(b)
+print(sl)
+-------------------------------------------------------
+29. Write a Python program to get unique values from a list. 
+-------------------------------------------------------------
+a= [1,2,2,3,4,5,5,6,6,7]
+for x in a:
+    if(a.count(x)>1):
+        continue
+    print(x)
+-----------------------
+
+30. Write a Python program to get the frequency of the elements in a list.
+--------------------------------------------------------------------
+a= [1,2,2,3,4,5,5,6,6,7]
+for x in a:
+    if(a.count(x)<2):
+        continue
+    print(x)
+--------------------------------- 
+------------------------------------------------------------------------------------------ 
+
+
+35. Write a Python program to create a list by concatenating a given list which range goes from 1 to n. 
+	Sample list : ['p', 'q']
+	n =5
+	Sample Output : ['p1', 'q1', 'p2', 'q2', 'p3', 'q3', 'p4', 'q4', 'p5', 'q5']
+------------------------------------------------------------------------------------------
+lst = ['p','q']
+new_lst = []
+for x in range(1,6):
+    for i in lst:
+        new_lst.append(i+str(x))
+print(new_lst)
+----------------------------------------------
+METHOD-2:-
+-----------------
+lst = ['p','q']
+new_lst = []
+i = 1
+while(i<=5):
+    j=1
+    while(j<=len(lst)):
+        new_lst.append(lst[j-1]+str(i))
+        j+=1
+    i+=1
+print(new_lst)
+-----------------------------------
+
+
+
+37. Write a Python program to find common items from two lists.
+----------------------------------------------------
+a = [1,2,3,4,5]
+b  = [2,3,5,6,7,8]
+c = []
+for x in a:
+    for y in b:
+        if(x==y):# HERE BY USING NESTED LOOP 
+            c.append(x)
+print(c)
+----------------------------
+
+39. Write a Python program to convert a list of multiple integers into a single integer. 
+		Sample list: [11, 33, 50]
+		Expected Output: 113350
+-----------------------------------------------
+lst = [11, 33, 50]
+b = ""
+for x in lst:
+    b = b+str(x)
+print(b)
+---------------------
+40. Write a Python program to split a list based on first character of word.
+a=['sai','teja','nani','harsha']
+c = []
+for x in a:
+    c.append(x.split()) # BY USING STRINGS METHODS HERE SPLIT METHOD IS USED TO SPLIT THE WORD INTO LIST
+print(c)
+--------------------------------     
+
+47. Write a Python program to insert an element before each element of a list.
+--------------------------
+a = [1,2,3,4,5,6,7]
+i = "a"
+for x in range(0,len(a)+len(a),2):
+    a.insert(x,i)
+print(a)
+---------------------------------------
+
+49. Write a Python program to convert list to list of dictionaries.
+Sample lists: ["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]
+Expected Output: [{'color_name': 'Black', 'color_code': '#000000'}, {'color_name': 'Red', 'color_code': '#FF0000'}, {'color_name': 'Maroon', 'color_code': '#800000'}, {'color_name': 'Yellow', 'color_code': '#FFFF00'}]
+---------------------------------------------------------------
+a = ["Black", "Red", "Maroon", "Yellow"]
+b = ["#000000", "#FF0000", "#800000", "#FFFF00"]
+d={}
+sum = 0
+for x in a:
+    sum=sum+1 #incress the out side variable for index values of b
+    d[x]=b[sum-1] # here add the dict values through the thire index values 
+for k,v in d.items():
+    print(k,":",v)
+-----------------------------------------------------------
+46. Write a Python program to select the odd items of a list.
+-------------------------------------------------------------
+def numbers():
+    a = []
+    for x in range(1,31):
+        if x%2!=0:
+            a.append(x)
+    return a
+res = numbers()
+print(res)
+---------------------------------------------------------------------------
+52. Write a Python program to compute the difference between two lists.
+Sample data: ["red", "orange", "green", "blue", "white"], ["black", "yellow", "green", "blue"]
+Expected Output:
+	Color1-Color2: ['white', 'orange', 'red']
+	Color2-Color1: ['black', 'yellow']
+--------------------------------------------
+lst1= ["red", "orange", "green", "blue", "white"]
+lst2 = ["black", "yellow", "green", "blue"]
+c = set(lst1)-set(lst2)
+print(list(c))
+b = set(lst2)-set(lst1)
+print(list(b))
+-------------------------------------------------------------
+51. Write a Python program to split a list every Nth element.
+	Sample list: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+	Expected Output: [['a', 'd', 'g', 'j', 'm'], ['b', 'e', 'h', 'k', 'n'], ['c', 'f', 'i', 'l']]
+==================================================================================================
+a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+lst1 = []
+lst2 =list()
+lst3 = []
+for x in a[0::3]:
+    lst1.append(x)
+for i in a[1::3]:
+    lst2.append(i)
+for j in a[2::3]:
+    lst3.append(j)
+c=[lst1,lst2,lst3]
+print(c)
+------------------------------------------------------
+57. Write a Python program to check if all items of a given list of strings is equal to a given string. -
+----------------------------------------------------------------------------------------------------
+a = ['sai','tej','nan']
+val = 'GIVERN STRING LENGTH IS NOT SAME'
+for x in a:
+    if(len(a)==len(x)):
+        val = 'ALL STRING LENGTH IS SAME'
+if(val == val):
+    print("THE GIVEN STRING DATA LENGTH IS EQUAL")
+else:
+    print("THE GIVEN STRING DATA LENGTH IS NOT EQUAL")
+------------------------------------------------------------------
+58. Write a Python program to replace the last element in a list with another list.
+	Sample data : [1, 3, 5, 7, 9, 10], [2, 4, 6, 8]
+	Expected Output: [1, 3, 5, 7, 9, 2, 4, 6, 8]
+--------------------------------------------------------------
+a = [1, 3, 5, 7, 9, 10]
+b =  [2, 4, 6, 8]
+a.extend(b)
+c=[]
+for x in a:
+    if x==10:
+        continue
+    c.append(x)
+print(c)
+----------------
+method-2:
+------------------------------------
+a = [1, 3, 5, 7, 9, 10]
+b =  [2, 4, 6, 8]
+c = list()
+for x in a[0:-1]:
+    c.append(x)
+for i in b:
+    c.append(i)
+print(c)
+-------------------------------------------------------------
+Write a Python program to convert a string to a list.
+------------------------------------------------------------
+a = 'saiteja'
+b = a.split()
+print(b)
+----------------------------
+a = 'saiteja'
+b = []
+for x in a:
+    b.append(x)
+print(b)     # here each latter into a character in a list
+output :['s', 'a', 'i', 't', 'e', 'j', 'a']
+=====================
+# Write a Python program to create a list with infinite elements.
+-----------------------------------------------------------------
+a =[]
+print("THIS PROGRAM EXCUTE UNTILL YOU STOP ")
+print("PLEASE ENTER '@' THIS SYMBOL FOR STOP THE EXCUTION ")
+while(True):
+    val = input("ENTER VALUES :")
+    if val == '@':
+        break
+    a.append(int(val))
+print(a)
+
+================================================
+68. Write a Python program to extend a list without append.      
+	Sample data: [10, 20, 30]
+	[40, 50, 60]
+	Expected output : [40, 50, 60, 10, 20, 30]
+------------------------------------------
+a =  [10, 20, 30]
+b = [40, 50, 60]
+b.extend(a)
+print(b)
+=========================
+Write a Python program to insert a given string at the beginning of all items in a list.
+	Sample list : [1,2,3,4], string : emp
+	Expected output : ['emp1', 'emp2', 'emp3', 'emp4']
+----------------------------------------------------------
+a =  [1,2,3,4]
+b = 'emp'
+d=[]
+for x in a:
+    c=b+str(x) #here emp+1=emp1....................emp+4=emp4
+    d.append(c)
+print(d)
+------------------------------------------------------------------------------
+65. Write a Python program to move all zero digits to end of a given list of numbers. 
+	Expected output:
+	Original list:
+	[3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2, 9, 7, 1]
+	Move all zero digits to end of the said list of numbers:
+	[3, 4, 6, 2, 6, 7, 6, 9, 10, 7, 4, 4, 5, 3, 2, 9, 7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+-----------------------------------------------------------------------------------------------
+a = [3, 4, 0, 0, 0, 6, 2, 0, 6, 7, 6, 0, 0, 0, 9, 10, 7, 4, 4, 5, 3, 0, 0, 2, 9, 7, 1]
+b = []
+c=[]
+for x in a:
+    if x!=int(0):
+        c.append(x) # this list is contains non zero elements
+        continue
+    b.append(x) # this list containes zero elements
+c.extend(b)
+print(c)  
+=================================================================================
+ Write a Python program to find the list in a list of lists whose sum of elements is the highest. 
+	Sample lists: [1,2,3], [4,5,6], [10,11,12], [7,8,9]
+	Expected Output: [10, 11, 12]
+------------------------------------------
+a =[ [1,2,3], [4,5,6], [10,11,12], [7,8,9]]
+sum = 0
+count =0
+sai=0
+teja=0
+for x,i,j,k,in zip(a[0],a[1],a[2],a[3]):
+    sum=sum+x
+    count+=i
+    sai+=j
+    teja+=k
+    print(x,i,j,k)
+print("======================")
+print(sum,count,sai,teja)
+print("======================")
+print("HEIGHT VALUE ",max(sum,count,sai,teja))
+--------------------------------------------------------
+Write a Python program to find the list in a list of lists whose sum of elements is the highest. 
+	Sample lists: [1,2,3], [4,5,6], [10,11,12], [7,8,9]
+	Expected Output: [10, 11, 12]
+-----------------------------------------------------
+a = [[1, 2, 3], [4, 5, 6], [10, 11, 12], [7, 8, 9]]
+value =0
+height_list =[]
+for x in a:
+    lst = sum(x)  #here using sum() method for calculating sum of each sublist of list
+    if lst>value:
+        value=lst
+        height_list=x
+print(height_list)
+---------------------------------
+69. Write a Python program to remove duplicates from a list of lists.      
+		Sample list : [[10, 20], [40], [30, 56, 25], [10, 20], [33], [40]]
+		New List : [[10, 20], [30, 56, 25], [33], [40]]
+----------------------------------------------------------------------
+
+a =  [[10, 20], [40], [30, 56, 25], [10, 20], [33], [40]]
+b = []
+for x in a:
+    if x not in b:
+        b.append(x)
+print(b)
+-----------------------------------------------
+70. Write a Python program to find the items starts with specific character from a given list. 
+		Expected Output:
+		Original list:
+		['abcd', 'abc', 'bcd', 'bkie', 'cder', 'cdsw', 'sdfsd', 'dagfa', 'acjd']
+		Items start with a from the said list:
+		['abcd', 'abc', 'acjd']
+		Items start with d from the said list:
+		['dagfa']
+		Items start with w from the said list:
+		[]
+--------------------------------------------------------------------
+a = ['abcd', 'abc', 'bcd', 'bkie', 'cder', 'cdsw', 'sdfsd', 'dagfa', 'acjd']
+b = []
+c = []
+d =[]
+
+for x in a:
+   if x.startswith('a'):
+       b.append(x)
+   elif x.startswith('d'):
+       c.append(x)
+   elif x.startswith('w'):
+       d.append(x)
+print(b)
+print(c)
+print(d)
+----------------------------------------------------------------73. Write a Python program to remove consecutive duplicates of a given list. 
+		Original list:
+		[0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]
+		After removing consecutive duplicates:
+		[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4]
+--------------------------------------------------------
+a = [0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]
+b=set(a)
+print(a)
+print(list(b))
+=================================
+84. Write a Python program to round the numbers of a given list, print the minimum and maximum numbers and multiply the numbers by 5. Print the unique numbers in ascending order separated by space. 
+	Original list: [22.4, 4.0, 16.22, 9.1, 11.0, 12.22, 14.2, 5.2, 17.5]
+	Minimum value: 4
+	Maximum value: 22
+	Result:
+	20 25 45 55 60 70 80 90 110
+------------------------------------------------------------------------
+a =  [22.4, 4.0, 16.22, 9.1, 11.0, 12.22, 14.2, 5.2, 17.5]
+b = []
+for x in a:
+    b.append(int(x))
+print(b)
+print("==============================================")
+mini=b[0]
+for i in b:
+    if i<mini:
+        mini=i
+print(f'MINIMUM VALUE OF GVEN LIST :{mini}')
+print("========================================")
+maxi = b[0]
+for j in b:
+    if j>maxi:
+        maxi=j
+print(f'MAXIMUM VALUE OF GVEN LIST :{maxi}')
+----------------------------------------------------------------
+===================================================================================================
+
+86. Write a Python program to create a 3X3 grid with numbers.
+	3X3 grid with numbers:
+	[[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+-------------------------------------------------
+a =list()
+for x in range(1,4):
+    a.append(x)
+
+b = list()
+b.append(a)
+print(b*3) #here [1,2,3] list moveing another list then the result is [[1,2,3]].........so inside list multiple with 3
+# then the final out put is [[1,2,3],[1,2,3],[1,2,3]]
+================================================================
+
+72. Write a Python program to flatten a given nested list structure.
+		Original list: [0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]
+		Flatten list:
+		[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
+================================================================================
+a = [0, 10, [20, 30], 40, 50, [60, 70, 80], [90, 100, 110, 120]]
+b,c,d = a[2],a[-2],a[-1]
+e =list()
+for x in a:
+    if x==a[2] or x==a[-1] or x==a[-2]:
+        continue
+    e.append(x)
+if True:
+    e.extend(b) or e.extend(c) or e.extend(d)
+    e.sort()
+    print(e)
+-----------------------------------------------
+
+78. Write a Python program to split a given list into two parts where the length of the first part of the list is given. 
+	Original list:
+	[1, 1, 2, 3, 4, 4, 5, 1]
+	Length of the first part of the list: 3
+	Splited the said list into two parts:
+	([1, 1, 2], [3, 4, 4, 5, 1])
+================================================
+a =[1, 1, 2, 3, 4, 4, 5, 1]
+b = list(a[0:3])
+c = list(a[3:])
+e =list()
+e.append(b)
+e.append(c)
+print(tuple(e))
+----------------------------------------------------------
+79. Write a Python program to remove the K'th element from a given list, print the new list. Original list:
+	[1, 1, 2, 3, 4, 4, 5, 1]
+	After removing an element at the kth position of the said list:
+	[1, 1, 3, 4, 4, 5, 1]
+==============================================
+a = [1, 1, 2, 3, 4, 4, 5, 1]
+#[1, 1, 3, 4, 4, 5, 1]
+b = list()
+for x in a:
+    if x==2:
+        continue
+    b.append(x)
+print(f"BEFORE REMOVING kth position {a}")
+print(f"AFTER REMOVING  kth position {b}")
+=====================================================
+99. Write a Python program to find the maximum and minimum values in a given heterogeneous list.
+	Original list:
+	['Python', 3, 2, 4, 5, 'version']
+	Maximum and Minimum values in the said list:
+	(5, 2)
+------------------------------------------------------------
+a = ['Python', 3, 2, 4, 5, 'version']
+b = list(a[1:-1])
+print(f'maximum number of given number --->{max(b)}')
+print(f"minimum number of given number----> {min(b)}")
+'''
+===================================================
+'''
+#methdo-2
+a = ['Python', 3, 2, 4, 5, 'version']
+b = list()
+for x in a:
+    if x==str(x):
+        continue
+    b.append(x)
+maximum_value = b[0]
+minimum_value = b[0]
+for i in b:
+    if i>maximum_value:
+        maximum_value=i
+    elif i<minimum_value:
+        minimum_value=i
+print('maximum number of gievn list {}'.format(maximum_value))
+print('minimum number of gievn list {}'.format(minimum_value))
+------------------------------------------------------------------------
+100. Write a Python program to extract common index elements from more than one given list. 
+	Original lists:
+	[1, 1, 3, 4, 5, 6, 7]
+	[0, 1, 2, 3, 4, 5, 7]
+	[0, 1, 2, 3, 4, 5, 7]
+	Common index elements of the said lists:
+	[1, 7]
+====================================================
+a =[1, 1, 3, 4, 5, 6, 7]
+b = [0, 1, 2, 3, 4, 5, 7]
+c = [0, 1, 2, 3, 4, 5, 7]
+e=list()
+sum=0
+for x in a:
+    sum+=1
+    if str(x) in str(b[sum-1]) and str(c[sum-1]):
+        e.append(x)
+print(e)
+---------------------------------------
+96. Write a Python program to sort a given list of lists by length and value. 
+	Original list:
+	[[2], [0], [1, 3], [0, 7], [9, 11], [13, 15, 17]]
+	Sort the list of lists by length and value:
+	[[0], [2], [0, 7], [1, 3], [9, 11], [13, 15, 17]]
+==============================================================
+a = [[2], [0], [1, 3], [0, 7], [9, 11], [13, 15, 17]]
+#[[0], [2], [0, 7], [1, 3], [9, 11], [13, 15, 17]]
+a.sort()
+b = list()
+for x in a:
+    if len(x)==1:
+        b.append(x)
+for i in a:
+    if len(i)>1:
+        b.append(i)
+print(b)
+========================================
+94. Write a Python program to count number of unique sublists within a given list. 
+	Original list:
+	[[1, 3], [5, 7], [1, 3], [13, 15, 17], [5, 7], [9, 11]]
+	Number of unique lists of the said list:
+	{(1, 3): 2, (5, 7): 2, (13, 15, 17): 1, (9, 11): 1}
+	Original list:
+	[['green', 'orange'], ['black'], ['green', 'orange'], ['white']]
+	Number of unique lists of the said list:
+	{('green', 'orange'): 2, ('black',): 1, ('white',): 1}
+======================================================================
+a = [[1, 3], [5, 7], [1, 3], [13, 15, 17], [5, 7], [9, 11]]
+d={}
+sum=0
+for x in a:
+    sum+=1
+    d[tuple(x)]=a.count(a[sum-1])
+print(d)
+
+b=[['green', 'orange'], ['black'], ['green', 'orange'], ['white']]
+dict={}
+
+sum1=0
+for i in b:
+    sum1+=1
+    dict[tuple(i)]=b.count(b[sum1-1])
+print(dict)
+=======================================================
+
+93. Write a Python program to count the number of sublists contain a particular element.
+		Original list:
+		[[1, 3], [5, 7], [1, 11], [1, 15, 7]]
+		Count 1 in the said list:
+		3
+		Count 7 in the said list:
+		2
+		Original list:
+		[['A', 'B'], ['A', 'C'], ['A', 'D', 'E'], ['B', 'C', 'D']]
+		Count 'A' in the said list:
+		3
+		Count 'E' in the said list:
+		1
+=================================================================
+a = [[1, 3], [5, 7], [1, 11], [1, 15, 7]]
+b = list()
+sum=0
+for x in a:
+    sum+=1
+    for i in a[sum-1]:
+        b.append(i)
+print(b.count(1))
+print(b.count(7))
+
+s= 	[['A', 'B'], ['A', 'C'], ['A', 'D', 'E'], ['B', 'C', 'D']]
+lst=list()
+sum=0
+for x in s:
+    sum+=1
+    for i in s[sum-1]: # this inner loop helps to iterate every sub-list of list with thire index values 
+        #sum is used to find the index values 
+        lst.append(i)
+print(lst.count('A'))
+print(lst.count('E'))  #here counting E value for the list 
+=====================================================================
+91. Write a Python program to find the list with maximum and minimum length. 
+	Original list:
+	[[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
+	List with maximum length of lists:
+	(3, [13, 15, 17])
+	List with minimum length of lists:
+	(1, [0])
+	Original list:
+	[[0], [1, 3], [5, 7], [9, 11], [3, 5, 7]]
+	List with maximum length of lists:
+	(3, [3, 5, 7])
+	List with minimum length of lists:
+	(1, [0])
+	Original list:
+	[[12], [1, 3], [1, 34, 5, 7], [9, 11], [3, 5, 7]]
+	List with maximum length of lists:
+	(4, [1, 34, 5, 7])
+	List with minimum length of lists:
+	(1, [12])
+===============================================
+a  = [[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]]
+max = len(a[0])
+min= len(a[0])
+for x in a:
+    if len(x)>max:   # here finding the maximum len() of given list 
+        max=len(x)
+    elif len(x)<min:  # here finding the minimum len() of given list 
+        min=len(x)
+print(max)
+print(min)
+==================================================
+90. Write a Python program to count number of lists in a given list of lists. 
+		Original list:
+		[[1, 3], [5, 7], [9, 11], [13, 15, 17]]
+		Number of lists in said list of lists:
+		4
+		Original list:
+		[[2, 4], [[6, 8], [4, 5, 8]], [10, 12, 14]]
+		Number of lists in said list of lists:
+		3
+==================================================
+a = [[1, 3], [5, 7], [9, 11], [13, 15, 17]]
+sum = 0
+for x in a:
+    sum+=1
+print('THE GIVEN LIST HAVING {} SUB-LISTS '.format(sum))
+=======================================================
+88. Write a Python program to read a square matrix from console and print the sum of matrix primary diagonal. Accept the size of the square matrix and elements for each column separated with a space (for every row) as input from the user. 
+	Input the size of the matrix: 3
+	2 3 4
+	4 5 6
+	3 4 7
+	Sum of matrix primary diagonal:
+	14
+=======================================================
+a=[2 ,3, 4,
+	4 ,5, 6,
+	3, 4, 7]
+sum = 0
+for x in a[0::4]:
+    sum+=x
+print('forword direction Sum of matrix primary diagonal {}'.format(sum))
+sm =0
+for i in a[-3::-2]:
+    sm+=i
+print('back word direction Sum of matrix primary diagonal {}'.format(sm))
+===================================================================
+87. Write a Python program to read a matrix from console and print the sum for each column. Accept matrix rows, columns and elements for each column separated with a space(for every row) as input from the user. 
+	Input rows: 2
+	Input columns: 2
+	Input number of elements in a row (1, 2, 3):
+	1 2
+	3 4
+	sum for each column:
+	4 6
+=======================================================
+a =[1, 2,
+	3 ,4]
+print(sum((a[0:-1:2])))
+print(sum((a[1::2])))
+print('==========================')
+#user input
+n = int(input("HOW MANY ROWS YOU WANT :"))
+b = list()
+for x in range(1,n+1):
+    val = int(input("ENTER {} row value ".format(x)))
+    b.append(val)
+n = int(input("HOW MANY COLOUMS YOU WANT :"))
+c = list()
+for x in range(1,n+1):
+    col = int(input("ENTER {} row value ".format(x)))
+    c.append(col)
+print(b)
+print(c)
+row_sum =0
+col_sum = 0
+for x in b:
+    row=b[0]+c[0]
+    col = b[1]+c[1]
+    row_sum=row
+    col_sum=col
+print('===========')
+print(row_sum,'\t',col_sum)
+
+======================================================
+89. Write a Python program to Zip two given lists of lists. 
+	Original lists:
+	[[1, 3], [5, 7], [9, 11]]
+	[[2, 4], [6, 8], [10, 12, 14]]
+	Zipped list:
+	[[1, 3, 2, 4], [5, 7, 6, 8], [9, 11, 10, 12, 14]]
+===================================================================
+a = [[1, 3], [5, 7], [9, 11]]
+b = [[2, 4], [6, 8], [10, 12, 14]]
+c=list()
+for x,y in zip(a,b):
+    c.append(x+y)
+print(c)
+===================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
