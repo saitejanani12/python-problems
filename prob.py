@@ -390,3 +390,34 @@ def mapping(value):
     return value*2
 new_list = list(map(mapping,old_list))
 print(new_list)
+#****************Problems On Filter **********************
+
+old_list = [int(x) for x in range(1,21)]
+#Filtering by using Normal Function
+def filtering(value):
+    if value%2==0:
+        return True
+
+new_list = list(filter(filtering,old_list))
+print(new_list)
+
+#By Using Lambda Function 
+old_list = [int(x) for x in range(1,21)]
+new_list = set(filter(lambda x:x%2,old_list))
+print(new_list)
+
+
+#Reduce Function 
+from functools import reduce
+old_list = [int(x) for x in range(1,12)]
+def values(x,y):
+    return x+y
+new = reduce(values,old_list)
+print(new)
+
+#By Using Lambda Function
+old_list = [int(x) for x in range(1,12)]
+new = reduce(lambda x,y:x+y,old_list)
+
+print(new)
+
