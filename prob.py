@@ -421,3 +421,19 @@ new = reduce(lambda x,y:x+y,old_list)
 
 print(new)
 
+#Exception Handling 
+class LengthError(BaseException):pass
+
+def Password():
+    password = input("Enter Your passsword :")
+    if len(password)!=8:
+        raise LengthError 
+    else:
+        return password
+    
+try:
+    value = Password()
+except LengthError:
+    print("Password Length Must Be 8 charectors Above ")
+else:
+    print(value)
