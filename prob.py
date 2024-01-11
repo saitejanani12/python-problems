@@ -381,3 +381,12 @@ print(f1)
 ===========================
 
 """
+old_list = [int(x) for x in range(1,21) if x%2==0]
+new_list = list(map(lambda x:x*2,old_list))
+print(new_list)
+# By using Normal Function
+old_list = [int(x) for x in range(1,21) if x%2==0]
+def mapping(value):
+    return value*2
+new_list = list(map(mapping,old_list))
+print(new_list)
