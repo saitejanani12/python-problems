@@ -437,3 +437,22 @@ except LengthError:
     print("Password Length Must Be 8 charectors Above ")
 else:
     print(value)
+#Match Case Example
+choose_option = input("Enter WeekDay(Monday - Sunday) :")
+match(choose_option.lower()):
+    case 'monday':
+        print(f"Oops! This is {choose_option} You have to do work ?".title())
+    case 'tuesday':
+        print(f"Oops! This is {choose_option} You have to do work ?".title())
+    case 'wednesday':
+        print(f"Oops! This is {choose_option} You have to do work ?".title())
+    case 'thursday':
+        print(f"Oops! This is {choose_option} You have to do work ?".title())
+    case 'friday':
+        print(f"Oops! This is {choose_option} You have to do work ?".title())
+    case 'Saturday':  
+        print(f"Hurry ! This is {choose_option} there is no work  ?".title())
+    case 'sunday':  
+        print(f"Hurry ! This is {choose_option} there is no work  ?".title())
+    case _:
+        print("Plase Enter valid Input !.......")
