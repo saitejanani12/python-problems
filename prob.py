@@ -456,3 +456,69 @@ match(choose_option.lower()):
         print(f"Hurry ! This is {choose_option} there is no work  ?".title())
     case _:
         print("Plase Enter valid Input !.......")
+import time
+
+
+class Book:
+    def __init__(self):
+        self.book_name = "PYTHON"
+        # self.author_details()
+        print(f"The {self.book_name} ")
+
+    def author_details(self, Howmany):
+        self.name = "KVrao"
+        self.price = 12000
+        self.available = 120
+        self.HowMany = Howmany
+
+    def disply(self):
+        HowMany = int(input("How many books You want to buy :"))
+        self.author_details(HowMany)
+        print("Author Name ", self.name)
+        print("Book Price ", self.price)
+        print("Present Available Books", self.available)
+        print('after buying books remaining is ', self.available - HowMany)
+        print("Thanks For Buying This book")
+        print("Thanks for visit")
+
+class Library(Book):
+    def __init__(self):
+        print("Well Come to Library")
+
+    def avliable_book(self):
+        self.option = input('If you want to buy a book or go to library [b/l]')
+        if self.option=='b':
+            super().__init__()
+            super().disply()
+
+        else:
+            self.lst = ['python', 'java', 'c++', 'c', '.Net']
+            for x in range(len(self.lst)):
+                print(f"{x + 1}){self.lst[x]}")
+            self.choose = int(input("Enter which book u want :"))
+            match (self.choose):
+                case 1:
+                    print(f"Thanks For pic {self.lst[0]}book ")
+                    self.lst.remove(self.lst[0])
+                    print(f"Remaining Books in Our library {self.lst}")
+                case 2:
+                    print(f"Thanks For pic {self.lst[2 - 1]}book ")
+                    self.lst.remove(self.lst[2 - 1])
+                    print(f"Remaining Books in Our library {self.lst}")
+                case 3:
+                    print(f"Thanks For pic {self.lst[3 - 1]}book ")
+                    self.lst.remove(self.lst[3 - 1])
+                    print(f"Remaining Books in Our library {self.lst}")
+                case 4:
+                    print(f"Thanks For pic {self.lst[4 - 1]}book ")
+                    self.lst.remove(self.lst[4 - 1])
+                    print(f"Remaining Books in Our library {self.lst}")
+                case 5:
+                    print(f"Thanks For pic {self.lst[5 - 1]}book ")
+                    self.lst.remove(self.lst[5 - 1])
+                    print(f"Remaining Books in Our library {self.lst}")
+                case _:
+                    print("Plase choose valid Book")
+                    print("Try Again")
+s1 = Library()
+s1.avliable_book()
