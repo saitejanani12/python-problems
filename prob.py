@@ -538,3 +538,41 @@ for x in range(1,sym+1):
     symbols = random.choice(['!', '@', '#', '$', '%', '^', '&', '*', ])
     password=password+symbols
 print(f"Your Strong Password is{password}")
+try:
+    import random
+
+    password = list()
+    numbers = random.randrange(1, 11)
+    choose = int(input('Enter How many characters do You have in your password ?'))
+    if choose>5:
+        print("Dont Enter 5 Above ")
+    else:
+        for x in range(1, choose + 1):
+            characters = random.choice(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'])
+            password.append(characters)
+    num = int(input('Enter How many symbols do You have in your password ?'))
+    if num>5:
+        print("Dont Enter 5 Above ")
+    else:
+        for i in range(1, num + 1):
+            symbols = random.choice(['!', '@', '#', '$', '%', '^', '&', '*', ])
+            password.append(symbols)
+    sym = int(input('Enter How many Numbers  do You have in your password ?'))
+    if sym>5:
+        print("Dont Enter 5 Above ")
+    else:
+        for s in range(1, sym + 1):
+            numbers = random.randrange(1, 11)
+            password.append(numbers)
+        random.shuffle(password)
+    new_password = ''
+    for x in password:
+        new_password = new_password + str(x)
+    if len(new_password) < 10:
+        print(f'Week Password {new_password}')
+    else:
+        print(f"Strong Password '{new_password}' ")
+except ValueError:
+    print("Don't Enter Alphabets")
+
+
