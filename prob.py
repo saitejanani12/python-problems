@@ -522,3 +522,19 @@ class Library(Book):
                     print("Try Again")
 s1 = Library()
 s1.avliable_book()
+#Strong Password Creation By using loops and random module
+import random
+password = ''
+choose = int(input('Enter How many characters do You have in your password ?'))
+for x in range(1,choose+1):
+    characters = random.choice(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'])
+    password=password+characters
+num = int(input('Enter How many Numbers do You have in your password ?'))
+for i in range(1,num+1):
+    numbers = random.randrange(1, 11)
+    password=password+str(numbers)
+sym = int(input("Enter how many symbols Do You want?"))
+for x in range(1,sym+1):
+    symbols = random.choice(['!', '@', '#', '$', '%', '^', '&', '*', ])
+    password=password+symbols
+print(f"Your Strong Password is{password}")
