@@ -575,4 +575,9 @@ try:
 except ValueError:
     print("Don't Enter Alphabets")
 
-
+#Finding Leap year's 1990 to 2025
+value = [int(x) for x in range(1990,2025)]
+for x in value:
+    if x % 4 == 0:
+        print(f"{x}===>'Leap Year'")
+    
