@@ -580,4 +580,22 @@ value = [int(x) for x in range(1990,2025)]
 for x in value:
     if x % 4 == 0:
         print(f"{x}===>'Leap Year'")
+#writing Try block inside try block
+
+try:
+    n = int(input("Enter a number :"))
+    if type(n)==int:
+        print("Moved To next Step")
+        while True:
+            try:
+                name = input("Enter name :")
+                age = int(input("Enter Your Age :"))
+            except ValueError:
+                print("Don't Enter alphabets in Age Field")
+            else:
+                print("Thanks For Providing Data")
+                break
+except ValueError:
+    print("Please Try Again")
+
     
