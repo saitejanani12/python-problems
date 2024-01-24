@@ -597,5 +597,91 @@ try:
                 break
 except ValueError:
     print("Please Try Again")
+#ATM Exception Code
+class PinError(BaseException):pass
+class NoAmountError(BaseException):pass
+class MinimumError(BaseException):pass
+class LengthError(BaseException):pass
+class AlphaError(BaseException):pass
+your_bank_balance = 10000
+your_pin = ""
+def Balance_enquery():
+    print(f"Your Bank Balance is {your_bank_balance}")
+    return your_bank_balance
+def with_draw_money():
+    global your_pin,your_bank_balance
+    try:
+        amount = int(input("Enter Amount :"))
+        set_your_pin = input("Enter set your pin number :")
+        your_pin+=set_your_pin
+        if len(set_your_pin)<4:
+            raise AlphaError
+        re_enter_your_pin = input("Re-Enter Your pin Number :")
+        if set_your_pin != re_enter_your_pin:
+            raise PinError
+        with_draw_amount = your_bank_balance-amount
+        your_bank_balance=with_draw_amount
+        if your_bank_balance<=500:
+            raise MinimumError
+        print(f"remaining balance is  {with_draw_amount} ")
+    except PinError:
+        print("Pin Erro ")
+    except MinimumError:
+        print("You Have To Maintain 500 minimum balance")
+    except LengthError:
+        print("")
+    except ValueError:
+        print("Do't Use Alphabets in Pin Number Field")
+    except AlphaError:
+        print("Do't Use Alphabets in Pin Number Field and Pin Number Must be 4 or Above 4 digits")
+        
+        
+def Deposite_money(value,pin):
+    global your_bank_balance
+    your_bank_balance= your_bank_balance+value
+    print(f"You balance is {your_bank_balance}")
 
+
+print("""
+1 ) Balance Enquery
+2 ) WithDraw amount 
+3 ) Diposite Money
+4 ) Pin Change 
+""")
+choose = int(input("Choose One Option :"))
+while True:
+    match(choose):
+        case 1:
+            Balance_enquery()
+            if input("If you want to do more operation [y/n] ").lower() == 'y':
+                choose = int(input("Choose One Option :"))
+            else:
+                print("Thanks For Using")
+                break
+        case 2:
+            
+            with_draw_money()
+            if input("If you want to do more operation [y/n] ").lower() == 'y':
+                choose = int(input("Choose One Option :"))
+            else:
+                print("Thanks For Using")
+                break
+        case 3:
+            value = int(input("Enter Amount :"))
+            pin = input("Enter your pin number :")
+            Deposite_money(value,pin)
+            if input("If you want to do more operation [y/n] ").lower() == 'y':
+                choose = int(input("Choose One Option :"))
+            else:
+                print("Thanks For Using")
+                break
+        case 4:
+            print("This Option Under Proccesing")
+            break
+            
+        case _:
+            print("Invalid Option")
+            break
+      
+    
     
