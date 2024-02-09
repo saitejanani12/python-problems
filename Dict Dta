@@ -1,0 +1,8 @@
+keys = ['name','age','phone_number','City']
+d = {}
+for x in keys:
+    value = input("Enter {}".format(x))
+    d[x]=value
+    if len(value)<=0:
+        d[x]='----'
+print(d)
